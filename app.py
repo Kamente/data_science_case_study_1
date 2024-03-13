@@ -28,11 +28,12 @@ mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
 
 # Creating a new observation with the first 8 features
-new_observation_values = [1, 93, 70, 31, 0, 30.4, 0.315, 23]
+new_observation_values = [1,168,88,29,0,35,0.905,52]
 new_observation = [new_observation_values]
 
 
 # Predict the outcomes using the new observation
+print("Predicted Outcome in the next 5 years:")
 predicted_outcome = regressor.predict(new_observation)
 print("Predicted Outcome:", predicted_outcome)
 
@@ -43,6 +44,6 @@ actual_outcomes = dataset['Outcome']
 for i, pred in enumerate(predicted_outcome):
     actual = actual_outcomes[i]
     if pred >= 0.5:
-        print(f"Predicted Outcome: 1 (Diabetic)")
+        print(f"Predicted Outcome : 1 (Diabetic)")
     else:
         print(f"Predicted Outcome: 0 (Non-diabetic)")
