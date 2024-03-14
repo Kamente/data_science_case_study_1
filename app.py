@@ -27,7 +27,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 # Creating a new observation with the first 8 features
-new_observation_values = [2,105,75,0,0,23.3,0.56,53]
+new_observation_values = [2, 105, 75, 0, 0, 23.3, 0.56, 53]
 
 # Predict the outcome using the new observation
 predicted_outcome = classifier.predict([new_observation_values])
