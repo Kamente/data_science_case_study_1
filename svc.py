@@ -12,7 +12,8 @@ X = dataset.drop('Outcome', axis=1)
 y = dataset['Outcome']
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42)
 
 # Scale the features
 scaler = StandardScaler()
@@ -23,7 +24,7 @@ X_test_scaled = scaler.transform(X_test)
 feature_names = X.columns.tolist()
 
 # Train the Support Vector Classifier model
-model = SVC(kernel='linear', random_state=42)  # linear kernel for SVC
+model = SVC(kernel='linear', random_state=42)  
 model.fit(X_train_scaled, y_train)
 
 # Evaluate the model
@@ -35,10 +36,10 @@ print("Accuracy:", accuracy)
 print("Confusion Matrix:")
 print(conf_matrix)
 
-# New observation values (assuming the same format as the dataset)
+# New observation values
 new_observation_values = [[2, 105, 75, 0, 0, 23.3, 0.56, 53]]
 
-# Scale the new observation using the same scaler
+# Scale the new observation 
 new_observation_scaled = scaler.transform(new_observation_values)
 
 # Predict the outcome for the new observation

@@ -33,7 +33,7 @@ print("Accuracy:", accuracy)
 print("Confusion Matrix:")
 print(conf_matrix)
 
-# New observation values (assuming the same format as the dataset)
+# New observation values 
 new_observation_values = [[7, 187, 50, 33, 392, 33.9, 0.826, 34]]
 
 # Scale the new observation using the same scaler

@@ -32,7 +32,7 @@ new_observation_values = [2, 105, 75, 0, 0, 23.3, 0.56, 53]
 # Predict the outcome using the new observation
 predicted_outcome = classifier.predict([new_observation_values])
 
-# **Confusion Matrix for overall model performance**
+# Confusion Matrix for overall model performance
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(conf_matrix)
